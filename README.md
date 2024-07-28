@@ -1,11 +1,44 @@
-# Things to Remember
+# README
 
-### Sample Commands
+This project is created to generate pdf files by uploading a csv dataset. Irrespective of the number of columns, the data will be uploaded in to a SQLite database table named 'data'. Then queries can be configurable in queries.sql file. Required query and the report configs are also configurable via config.xml file. In addition, report template is highly customizable via html & css templates.
+
+## Setting up the environment
+
+1. Clone the code base
+2. Create a virtual environment and activate it
 
 ```
-source myenv/bin/activate
+python -m venv env
+source env/bin/activate
 
-python3 csv_to_pdf_report.py -f /Users/ayesh/Developer/Python/file-read/Retail_Transactions_Dataset.csv -o both
-
-python csv_to_pdf_report.py -d default_database.db -o generate
 ```
+
+3. Install the required packages
+
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+```
+python main.py
+    -f or --csv_file => Path to the CSV data file
+    -d or --database => Path to the SQLite database file
+    -r or --pdf => Name of the output PDF file (default=prefix with 'report_' + <date/time>)
+    -c or --config => Path to the configuration XML file (default='configurations/config.xml')
+    --db_only => Run only the database insertion
+    --pdf_only => Run only the PDF generation
+```
+
+### Insert data to a datasource and generate a pdf report
+
+`python main.py -f <csv_file_path>`
+
+### Only to insert data in to a datasource
+
+`python main.py -f <csv_file_path> --db_only`
+
+#### Only to generate a pdf report from an existing datasource
+
+`python main.py -d <datasource_path> --pdf_only`
