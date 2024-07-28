@@ -44,4 +44,4 @@ python main.py
 `python main.py -d <datasource_path> --pdf_only`
 
 > [!NOTE]  
-> This is a GPT 3.5 [assisted project](https://chatgpt.com/share/bacddbb0-f84d-42f5-bb30-b7895d27239c)
+> This is a GPT 3.5 [assisted project](https://chatgpt.com/share/bacddbb0-f84d-42f5-bb30-b7895d27239c) created to assess an optimal approach in processing csv files and report genration with html templates with python
