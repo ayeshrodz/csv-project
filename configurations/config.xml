@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <batchSize>1000</batchSize>
+    <defaultDB>default_database.db</defaultDB>
+    <defaultPDFPrefix>report_</defaultPDFPrefix>
+    <reportsDirectory>reports</reportsDirectory>
+    <pdfkitPath>/usr/local/bin/wkhtmltopdf</pdfkitPath>
+    <pdfOptions>
+        <option name="enable-local-file-access"></option>
+        <option name="page-size">A4</option>
+        <option name="orientation">Landscape</option>
+        <option name="margin-top">0.25in</option>
+        <option name="margin-right">0.15in</option>
+        <option name="margin-bottom">0.25in</option>
+        <option name="margin-left">0.15in</option>
+        <option name="encoding">UTF-8</option>
+        <option name="no-outline"></option>
+    </pdfOptions>
+    <sqlFilePath>configurations/queries.sql</sqlFilePath>
+    <queryName>default_query</queryName> <!-- Add this line for the SQL query name -->
+    <queryLimit>50</queryLimit>
+    <deleteTempHtml>true</deleteTempHtml>
+</config>
